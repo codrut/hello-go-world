@@ -9,12 +9,14 @@ type Vertex struct {
 var m map[string]Vertex
 
 func main() {
-	m = make(map[string]Vertex)
-	m["Bell Labs"] = Vertex{
-		40.68433, -74.39967,
+	var m = map[string]Vertex{
+		"Bell Labs": {40.68433, -74.39967},
+		"Bucharest": {44.439663, 26.096306},
+		"Google":    {37.42202, -122.08408},
 	}
-  m["Bucharest"] = Vertex{
-    44.439663, 26.096306,
-  }
-	fmt.Println(m["Bell Labs"])
+
+	coord, ok := m["Bucharest"]
+	if ok {
+		fmt.Println(coord)
+	}
 }
