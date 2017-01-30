@@ -1,6 +1,5 @@
 package main
-
-;Shortest solution for the GOlang tour maps exercise
+//Shortest solution for the GOlang tour maps exercise
 
 import (
 	"golang.org/x/tour/wc"
